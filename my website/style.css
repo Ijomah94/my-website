@@ -1,0 +1,242 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+
+:root{
+  --header-color: #fdfafa;
+  --text-color: rgb(18, 18, 53);
+  --text-light: #333131;
+  --text-dark: #fff;
+  --primary-color: #270a0a;
+  --bg-color: linear-gradient(to right, #bdb4b4, #e7e2e3);;
+  --bg-color-dark: #030000;
+  --hover-color: #301015;
+}
+
+body{
+  background: var(--bg-color);
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  background: var(--header-color);
+  z-index: 100;
+}
+
+header img{
+  width: 35px;
+  height: 35px;
+  border: 2px solid red;
+  border-radius: 6px;
+}
+
+header .logo{
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+
+header .logo .company_name{
+  background: linear-gradient(to left, orange, darkred);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 5px;
+  box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+}
+
+
+.categories-search label{
+  background:linear-gradient(to right, orange, darkred);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 5px; 
+}
+
+.search-box input{
+  width: 250px;
+  outline: none;
+  border: 2px solid rgba(224, 131, 9, 0.4);
+  height: 50px;
+  border-radius: 20px;
+  padding-left: 10px;
+  background: linear-gradient(to right, orange, darkred);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.search-box input::placeholder{
+  font-style:oblique;
+}
+
+.search-box i{
+  font-size: 25px;
+  position: absolute;
+  top: 35%;
+  right: 1rem;
+  background: linear-gradient(to right, orange, darkred);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+aside{
+  width: 250px;
+  background: #fff;
+  position: relative;
+  top: 0px;
+  left: -10;
+  z-index: 10;
+  padding: 5px;
+  height: 100vh;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.sidebar-container {
+  background: var(--bg-color);
+  height: 99%;
+  width: 90%;
+  margin-top: 80px;
+}
+
+.menu{
+  width: 100%;
+}
+
+.sidebar .sidebar-container .menu .link{
+  margin-top: 35px;
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  background: linear-gradient(to right, orange, darkred);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 150px;
+}
+
+.shop h2{
+  text-align: center;
+  background: linear-gradient(to right, orange, darkred);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: -20px;
+}
+
+
+.sidebar-container a{
+  width: 200px;
+}
+
+ .menu .link a{
+  width: 100%;
+}
+
+.sidebar .sidebar-container .link :hover{
+  font-size: larger;
+  color: var(--text-light);
+  background: orange;
+}
+
+.container{
+  max-width: 1120px;
+  margin: auto;
+}
+
+section{
+  padding: 4rem 0 3rem;
+}
+
+.shop{
+  margin-top: 2rem;
+}
+
+/*Shop content */
+.shop-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(135px,auto));
+  gap: 1.5rem;
+  margin-left: 40px;
+}
+
+.product-box{
+  position: relative;
+  height: 20rem;
+  width: 10rem;
+  padding: 2rem 1rem 1rem 1rem ;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-box:hover{
+  border: 1px solid var(--text-color);
+  transition: 0.4s;
+}
+
+.product-img{
+  width: 100%;
+  height: 10rem;
+  margin-bottom: 0.5rem;
+  background: #eee;
+  border-radius: 10px;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  mix-blend-mode: color-burn;
+}
+
+.product-title{
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, orange, darkred);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 1rem;
+}
+
+.price{
+  text-align: center;
+  font-weight: 900;
+}
+
+.menu {
+  background: #030000;
+  width: 100%;
+}
+
+ .sidebar-container .link {
+  width: 100%;
+  height: fit-content;
+}
+
+aside .toggle{
+  position: absolute;
+  top: 20%;
+  right: -10px;
+  transform: translateY(-50%);
+  background: var(--primary-color);
+  width: 25px;
+  height: 25px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 22px;
+  z-index: 11;
+}
